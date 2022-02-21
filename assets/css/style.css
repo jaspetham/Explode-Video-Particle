@@ -1,0 +1,39 @@
+body{
+    overscroll-behavior: none;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas{
+    display: block;
+}
+
+.video{
+    position: absolute;
+    z-index: 1000;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    width: 40vh;
+    height: 68.5vh;
+    pointer-events: none;
+}
+
+.video video{
+    width: 100%;
+    transition: opacity .1s ease;
+}
+.video video.noShow{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
